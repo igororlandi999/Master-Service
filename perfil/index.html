@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>Perfil | Master Service</title>
+</head>
+<body>
+    <div class="dashboard-wrapper">
+        <nav class="nav">
+            <div class="nav-logo">
+                <p>Master Service</p>
+            </div>
+            <div class="nav-menu">
+                <ul>
+                    <li><a href="#" id="inicioLink" class="link">Início</a></li>
+                    <li><a href="#" class="link active">Perfil</a></li>
+                </ul>
+            </div>
+            <div class="nav-button">
+                <button class="btn white-btn" id="logoutBtn">Sair</button>
+            </div>
+        </nav>
+       
+        <div class="content">
+            <header class="dashboard-header">
+                <h1>Perfil</h1>
+                <p>Gerencie Suas Informações</p>
+            </header>
+           
+            <section class="profile-details">
+                <div class="profile-card">
+                    <h3>Nome de Usuário</h3>
+                    <p>João Dias</p>
+                </div>
+                <div class="profile-card">
+                    <h3>Senha</h3>
+                    <label for="current-password">Senha Atual</label>
+                    <input type="password" id="current-password" name="current-password" placeholder="Digite sua senha atual">
+                    <label for="new-password">Nova Senha</label>
+                    <input type="password" id="new-password" name="new-password" placeholder="Digite sua nova senha">
+                    <label for="confirm-password">Confirmar Nova Senha</label>
+                    <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirme sua nova senha">
+                    <button type="button">Alterar Senha</button>
+                </div>
+                <div class="profile-card">
+                    <h3>Distribuidor Associado</h3>
+                    <p>Veneza Sul</p>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

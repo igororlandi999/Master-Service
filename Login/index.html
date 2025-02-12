@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>John Deere | Master Service</title>
+</head>
+<body>
+ <div class="wrapper">
+    <nav class="nav">
+        <div class="nav-logo">
+            <p>Master Service</p>
+        </div>
+        <div class="nav-menu" id="navMenu">
+            <ul>
+                <li><a href="#" class="link active">Cliente</a></li>
+            </ul>
+        </div>
+        <div class="nav-button">
+            <button class="btn white-btn" id="loginBtn" onclick="login()">Login</button>
+            <button class="btn" id="registerBtn" onclick="register()">Cadastre-se</button>
+        </div>
+        <div class="nav-menu-btn">
+            <i class="bx bx-menu" onclick="myMenuFunction()"></i>
+        </div>
+    </nav>
+ 
+<!----------------------------- Form box ----------------------------------->    
+    <div class="form-box">
+       
+        <!------------------- login form -------------------------->
+ 
+        <div class="login-container" id="login">
+            <div class="top">
+                <span>Ainda não se cadastrou?<a href="#" onclick="register()">Cadastre-se</a></span>
+                <header>Login</header>
+            </div>
+            <div class="input-box">
+                <input type="text" id="username" class="input-field" placeholder="Username or Email">
+                <i class="bx bx-user"></i>
+            </div>
+            <div class="input-box">
+                <input type="password" id="password" class="input-field" placeholder="Password">
+                <i class="bx bx-lock-alt"></i>
+            </div>
+            <div class="input-box">
+                <input type="submit" id="signInBtn" class="submit" value="Sign In">
+            </div>
+            <div class="two-col">
+                <div class="one">
+                    <input type="checkbox" id="login-check">
+                    <label for="login-check"> Salvar informações </label>
+                </div>
+                <div class="two">
+                    <label><a href="#">Esqueceu sua senha?</a></label>
+                </div>
+            </div>
+        </div>
+ 
+        <!------------------- registration form -------------------------->
+        <div class="register-container" id="register">
+            <div class="top">
+                <span>Já é cadastrado? <a href="#" onclick="login()">Login</a></span>
+                <header>Cadastre-se</header>
+            </div>
+            <div class="two-forms">
+                <div class="input-box">
+                    <input type="text" id="firstname" class="input-field" placeholder="Firstname">
+                    <i class="bx bx-user"></i>
+                </div>
+                <div class="input-box">
+                    <input type="text" id="lastname" class="input-field" placeholder="Lastname">
+                    <i class="bx bx-user"></i>
+                </div>
+            </div>
+            <div class="input-box">
+                <input type="text" id="email" class="input-field" placeholder="Email">
+                <i class="bx bx-envelope"></i>
+            </div>
+            <div class="input-box">
+                <input type="password" id="regPassword" class="input-field" placeholder="Password">
+                <i class="bx bx-lock-alt"></i>
+            </div>
+            <div class="input-box">
+                <input type="submit" id="registerBtnSubmit" class="submit" value="Register">
+            </div>
+            <div class="two-col">
+                <div class="one">
+                    <input type="checkbox" id="register-check">
+                    <label for="register-check"> Salvar informações</label>
+                </div>
+                <div class="two">
+                    <label><a href="#">Termos e condições</a></label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>  
+ 
+<script>
+    function myMenuFunction() {
+        var i = document.getElementById("navMenu");
+        if (i.className === "nav-menu") {
+            i.className += " responsive";
+        } else {
+            i.className = "nav-menu";
+        }
+    }
+
+    var loginBtn = document.getElementById("loginBtn");
+    var registerBtn = document.getElementById("registerBtn");
+    var loginContainer = document.getElementById("login");
+    var registerContainer = document.getElementById("register");
+
+    function login() {
+        loginContainer.style.left = "4px";
+        registerContainer.style.right = "-520px";
+        loginBtn.className += " white-btn";
+        registerBtn.className = "btn";
+        loginContainer.style.opacity = 1;
+        registerContainer.style.opacity = 0;
+    }
+
+    function register() {
+        loginContainer.style.left = "-510px";
+        registerContainer.style.right = "5px";
+        loginBtn.className = "btn";
+        registerBtn.className += " white-btn";
+        loginContainer.style.opacity = 0;
+        registerContainer.style.opacity = 1;
+    }
+
+    document.getElementById('signInBtn').addEventListener('click', function(event) {
+        event.preventDefault(); // Previne o comportamento padrão do submit
+
+        var username = document.getElementById('username').value;
+        var password = document.getElementById('password').value;
+
+        // Simulação de verificação de credenciais
+        if (username === 'tecnico' && password === 'senha123') {
+            // Redireciona para a tela de início
+            window.location.href = 'http://127.0.0.1:5500/Clientes/In%C3%ADcio/index.html'; // Substitua 'inicio.html' pelo nome do arquivo da tela de início
+        } else {
+            alert('Credenciais inválidas. Tente novamente.');
+        }
+    });
+
+    document.getElementById('registerBtnSubmit').addEventListener('click', function(event) {
+        event.preventDefault(); // Previne o comportamento padrão do submit
+
+        var firstname = document.getElementById('firstname').value;
+        var lastname = document.getElementById('lastname').value;
+        var email = document.getElementById('email').value;
+        var password = document.getElementById('regPassword').value;
+
+        // Simulação de cadastro
+        if (firstname && lastname && email && password) {
+            alert('Informações cadastradas com sucesso!');
+            // Aqui você pode adicionar lógica adicional, como enviar os dados para um servidor
+        } else {
+            alert('Por favor, preencha todos os campos.');
+        }
+    });
+</script>
+</body>
+</html>

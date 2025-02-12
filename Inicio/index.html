@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+    <title>Dashboard do Cliente | Master Service</title>
+</head>
+<body>
+    <div class="dashboard-wrapper">
+        <nav class="nav">
+            <div class="nav-logo">
+                <p>Master Service</p>
+            </div>
+            <div class="nav-menu">
+                <ul>
+                    <li><a href="#" class="link active">Início</a></li>
+                    <li><a href="#" id="perfilLink" class="link">Perfil</a></li>
+                </ul>
+            </div>
+            <div class="nav-button">
+                <button class="btn white-btn" id="logoutBtn">Sair</button>
+            </div>
+        </nav>
+        
+        <div class="content">
+            <header class="dashboard-header">
+                <h1>Bem-vindo, Cliente</h1>
+                <p>Aqui estão suas solicitações de serviço e avaliações.</p>
+            </header>
+            
+            <section class="info-cards">
+                <div class="card">
+                    <h3>Serviços Solicitados</h3>
+                    <p>5</p>
+                </div>
+                <div class="card">
+                    <h3>Serviços Concluídos</h3>
+                    <p>3</p>
+                </div>
+                <div class="card">
+                    <h3>Serviços Pendentes</h3>
+                    <p>2</p>
+                </div>
+                <div class="card">
+                    <h3>Avaliações Feitas</h3>
+                    <p>4</p>
+                </div>
+            </section>
+            
+            <section class="details">
+                <h2>Detalhes das Solicitações</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Serviço</th>
+                            <th>Status</th>
+                            <th>Técnico</th>
+                            <th>Data</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Instalação de Ar Condicionado</td>
+                            <td>Concluído</td>
+                            <td>José Silva</td>
+                            <td>01/06/2024</td>
+                        </tr>
+                        <tr>
+                            <td>Reparo Elétrico</td>
+                            <td>Em Andamento</td>
+                            <td>Maria Oliveira</td>
+                            <td>10/06/2024</td>
+                        </tr>
+                        <tr>
+                            <td>Manutenção de Computador</td>
+                            <td>Pendente</td>
+                            <td>Carlos Souza</td>
+                            <td>15/06/2024</td>
+                        </tr>
+                        <tr>
+                            <td>Limpeza de Caixa d'Água</td>
+                            <td>Concluído</td>
+                            <td>Roberto Lima</td>
+                            <td>20/05/2024</td>
+                        </tr>
+                        <tr>
+                            <td>Instalação de Antena</td>
+                            <td>Concluído</td>
+                            <td>Ana Costa</td>
+                            <td>05/06/2024</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
